@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Breakout")
 
 #define colors
-bg = (230, 215, 181)
+bg = (236, 248, 249)
 #block colors
 block_red = (220, 70, 90)
 block_green = (85, 174, 85)
@@ -239,7 +239,7 @@ while run:
         elif game_over == 1:
             draw_text("YOU WIN!", font, text_col, 240, screen_height // 2 + 50)
             draw_text("CLICK ANYWHERE TO START", font, text_col, 100, screen_height // 2 + 100)
-        elif game_over == -1:
+        elif ball.move() == -1:
             draw_text("YOU LOSE!", font, text_col, 240, screen_height // 2 + 50)
             draw_text("CLICK ANYWHERE TO START", font, text_col, 100, screen_height // 2 + 100)
 
