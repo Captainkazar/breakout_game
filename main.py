@@ -15,7 +15,7 @@ bg = (230, 215, 181)
 #block colors
 block_red = (220, 70, 90)
 block_green = (85, 174, 85)
-block_blue = (69, 175, 230)
+block_brown = (78, 54, 54)
 
 #paddle colors
 paddle_col = (142, 135, 122)
@@ -78,11 +78,11 @@ class Wall:
             for block in row:
                 #assign a color based on block strength
                 if block[1] == 3:
-                    block_col = block_blue
+                    block_col = block_brown
                 elif block[1] == 2:
-                    block_col = block_green
-                elif block[1] == 1:
                     block_col = block_red
+                elif block[1] == 1:
+                    block_col = block_green
                 pygame.draw.rect(screen, block_col, block[0])
                 #split the color of the blocks
                 pygame.draw.rect(screen, bg, (block[0]), 1)
